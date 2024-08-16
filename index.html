@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da velha</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="overlay" class="none"></div>
+    
+    <div class="header">
+
+        <div class="score">
+            <div class="player">
+                <span>P1</span>
+            </div>
+            <div class="score-player1">
+                <span>0</span>
+            </div>
+            <div class="versus">
+                <span>x</span>
+            </div>
+            <div class="score-player2">
+                <span>0</span>
+            </div>
+            <div class="player">
+                <span>P2</span>
+            </div>
+        </div>
+
+        <div id="player">
+            <span>Player 1</span>
+        </div>
+
+    </div>
+    <div class="container">
+        <div id="1" class="" onclick="marcarCasa(this)"></div>
+        <div id="2" class="" onclick="marcarCasa(this)"></div>
+        <div id="3" class="" onclick="marcarCasa(this)"></div>
+        <div id="4" class="" onclick="marcarCasa(this)"></div>
+        <div id="5" class="" onclick="marcarCasa(this)"></div>
+        <div id="6" class="" onclick="marcarCasa(this)"></div>
+        <div id="7" class="" onclick="marcarCasa(this)"></div>
+        <div id="8" class="" onclick="marcarCasa(this)"></div>
+        <div id="9" class="" onclick="marcarCasa(this)"></div>
+    </div>
+
+    <div class="footer">        
+        <div class="settings">
+            <div class="icon"><img src="./src/img/bulb-outline.svg" alt="Icone escolher tema" onclick="tema()"></div>
+            <div class="icon"><img src="./src/img/refresh-outline.svg" alt="Icone restar partida" onclick="resetMatch()"></div>
+            <div class="icon"><a href="./index.html"><img src="./src/img/exit-outline.svg" alt="Icone sair"></a></div>
+        </div>
+   </div>
+
+   <div class="modal none">
+        <div class="titulo">
+            <span></span>
+        </div>
+        <div class="settings">
+            <div class="icon"><img src="./src/img/refresh-outline.svg" alt="Icone restar partida" onclick="resetMatch()"></div>
+        </div>
+        <div class="exit" onclick="fecharModal()">
+            <img class="icon" src="./src/img/x.svg" alt="Botão para fechar o modal">
+        </div>
+
+   </div>
+
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+</body>
+</html>
